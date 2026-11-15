@@ -1,0 +1,10 @@
+{
+  "button": "Core Beliefs",
+  "sheetTitle": "Pre-flight check",
+  "intro": "Before any project, I go through these. Each one is checked, every time.",
+  "progress": "{done} of {total} checked",
+  "skip": "Check all now",
+  "replay": "Run it again",
+  "checked": "checked",
+  "stampDefault": "Cleared for launch"
+}

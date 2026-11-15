@@ -1,0 +1,16 @@
+{
+  "heading": "Main kaise kaam karta hoon",
+  "intro": "Har project WhatsApp chat se shuru hota hai aur wahin chalta hai. Aam tor par kaam is tarteeb se hota hai.",
+  "chat_title": "Abdullah Khan",
+  "chat_aria": "Ek project kaise chalta hai, is ki misaali baat-cheet",
+  "typing": "Abdullah type kar raha hai",
+  "show_all": "Poori baat-cheet dikhao",
+  "note": "Yeh meri process ki likhi hui misaal hai, kisi asli client ki chat nahi.",
+  "reply_label": "Aapka message",
+  "reply_placeholder": "Apne business ke baare mein batayein",
+  "reply_default": "Assalam o Alaikum Abdullah, main ek project ke baare mein baat karna chahta hoon.",
+  "reply_cta": "WhatsApp par bhejein",
+  "reply_hint": "WhatsApp naye tab mein khulega aur aapka message pehle se likha hoga.",
+  "from_abdullah": "Abdullah ne kaha",
+  "from_you": "Aapne kaha"
+}

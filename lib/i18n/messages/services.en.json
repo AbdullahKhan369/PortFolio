@@ -1,0 +1,10 @@
+{
+  "title": "Services",
+  "lede": "Pick the one closest to what you need. Every button opens WhatsApp with the service already named.",
+  "colService": "Service",
+  "colAudience": "Who it is for",
+  "colIncludes": "What is included",
+  "ctaDefault": "Ask about this",
+  "waMessage": "Hi Abdullah, I would like to ask about: {title}.",
+  "empty": "Services will be listed here soon."
+}

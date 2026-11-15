@@ -1,0 +1,10 @@
+{
+  "button": "Mere Usool",
+  "sheetTitle": "Pre-flight check",
+  "intro": "Har project se pehle main yeh cheezein dekhta hoon. Har baar, ek ek karke.",
+  "progress": "{total} mein se {done} check ho gaye",
+  "skip": "Sab abhi check karein",
+  "replay": "Dobara chalayein",
+  "checked": "check ho gaya",
+  "stampDefault": "Launch ke liye clear"
+}

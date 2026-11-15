@@ -1,0 +1,42 @@
+/* Scoped styles for the sparks hunt (contract: no unprefixed globals). */
+
+.glow {
+  transition: opacity var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out);
+}
+.glow:hover,
+.glow:focus-visible {
+  opacity: 1 !important;
+  transform: scale(1.12);
+}
+
+.pulse {
+  animation: pulse 3.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(138, 92, 255, 0); }
+  50% { box-shadow: 0 0 16px 3px rgba(138, 92, 255, 0.55); }
+}
+
+.burst {
+  animation: burst 700ms var(--ease-out) both;
+}
+@keyframes burst {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+.rise {
+  animation: rise var(--dur-2) var(--ease-out) both;
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow { transition: none; }
+  .glow:hover, .glow:focus-visible { transform: none; }
+  .burst { animation: none; opacity: 0; }
+  .pulse { animation: none; }
+  .rise { animation: none; }
+}

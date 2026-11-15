@@ -1,0 +1,22 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# build output
+.next
+out
+build
+*.tsbuildinfo
+next-env.d.ts
+
+# secrets
+.env
+.env.*
+!.env.example
+
+# local tooling
+.vercel
+.DS_Store
+npm-debug.log*
+_stubs

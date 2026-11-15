@@ -1,0 +1,20 @@
+{
+  "title": "Privacy",
+  "updated": "Aakhri tabdeeli: 12 November 2026",
+  "intro": "Is page par likha hai ke yeh website aapke baare mein kya mehfooz karti hai aur kyun. Yeh mukhtasar hai kyunke mehfooz karne ko zyada kuch hai hi nahi.",
+  "back_home": "Home page par wapas",
+  "s1_title": "Yeh site kaun chalata hai",
+  "s1_body": "Yeh website Abdullah Khan ki hai, jo Karachi, Pakistan mein freelance web developer aur digital marketer hain aur studio The Prism Arc bhi chalate hain. Yahan kya jama hota hai aur kyun, yeh main khud tay karta hoon.",
+  "s2_title": "Main kya jama karta hoon",
+  "s2_body": "Agar aap contact form, Try your business ya free audit offer istemal karte hain to jo aap likhte hain woh main mehfooz karta hoon: aapka naam (agar diya ho), phone, WhatsApp number ya email, aapka message, jo business type aapne chuni, page ki zaban aur bhejne ka waqt. Main isay sirf aapko jawab dene aur apni leads ka hisaab rakhne ke liye istemal karta hoon.\n\nSite kuch beynaam amal bhi ginti hai, jaise WhatsApp button par click, zaban badalna ya spark milna. Har ginti mein sirf event ka naam, page ka path aur waqt hota hai. Yeh aap se jura hua nahi hota.",
+  "s3_title": "Main kya jama nahi karta",
+  "s3_body": "Is site par ishtihari cookies, tracking pixels ya kisi doosre ka analytics istemal nahi hota. Aapka IP address meray database mein mehfooz nahi hota. IP address sirf thori der ke liye server ki memory mein spam rokne ke liye dekha jata hai, rakha nahi jata.\n\nAapka browser aapki zaban ki pasand aur sparks ki talash ki progress aapke apne device par yaad rakh sakta hai. Yeh chhoti settings hain, tracking nahi.",
+  "s4_title": "Data kahan rakha jata hai",
+  "s4_body": "Messages Supabase database mein mehfooz hote hain. Site Vercel par host hai. Dono meri taraf se data sambhalte hain taake site chal sake. Fonts site banate waqt download hote hain aur site hi se milte hain.",
+  "s5_title": "WhatsApp aur doosri sites",
+  "s5_body": "Jo buttons WhatsApp, LinkedIn, GitHub ya kisi project ki live site kholte hain woh aapko is website se bahar le jate hain. In services ki apni privacy policies hain aur aapka data unhi ke tehet sambhala jata hai. WhatsApp par bheje gaye messages yeh site mehfooz nahi karti.",
+  "s6_title": "Aapka ikhtiyar",
+  "s6_body": "Aap mujh se keh sakte hain ke aapka mehfooz data dikhaun, theek karun ya mita dun. Home page par diye gaye rabte ke zariye mujhe message karein, main kar dunga. Inquiries main tab tak rakhta hoon jab tak khud na mita dun ya aap na kahein.",
+  "s7_title": "Tabdeeliyan",
+  "s7_body": "Agar yeh page badla to upar ki tareekh bhi badal jayegi."
+}

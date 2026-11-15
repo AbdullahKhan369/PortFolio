@@ -1,0 +1,13 @@
+:root{
+  --c-base:#12163A; --c-surface:#1B2050; --c-text:#F2F4FF; --c-muted:#9096C4; --c-wa:#25D366;
+  --c-violet:#8A5CFF; --c-azure:#3AA0FF; --c-mint:#4FE3B0; --c-amber:#FFC857;
+  --r-device:28px; --r-pill:999px; --r-block:0px;
+  --ease-out:cubic-bezier(.16,1,.3,1); --dur-1:160ms; --dur-2:320ms; --dur-3:640ms;
+  --safe-top:env(safe-area-inset-top,0px); --safe-bottom:env(safe-area-inset-bottom,0px);
+}
+@theme inline{
+  --color-base:var(--c-base); --color-surface:var(--c-surface); --color-text:var(--c-text); --color-muted:var(--c-muted);
+  --color-wa:var(--c-wa); --color-violet:var(--c-violet); --color-azure:var(--c-azure); --color-mint:var(--c-mint); --color-amber:var(--c-amber);
+  --font-display:var(--font-anybody), system-ui, sans-serif;
+  --font-body:var(--font-source-serif), Georgia, serif;
+}

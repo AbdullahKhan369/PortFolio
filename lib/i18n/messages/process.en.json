@@ -1,0 +1,16 @@
+{
+  "heading": "How I work",
+  "intro": "Every project starts in a WhatsApp chat and stays there. This is the order things usually happen in.",
+  "chat_title": "Abdullah Khan",
+  "chat_aria": "Example conversation about how a project runs",
+  "typing": "Abdullah is typing",
+  "show_all": "Show the whole conversation",
+  "note": "This is a written example of my process, not a real client chat.",
+  "reply_label": "Your message",
+  "reply_placeholder": "Tell me about your business",
+  "reply_default": "Hi Abdullah, I'd like to talk about a project.",
+  "reply_cta": "Send on WhatsApp",
+  "reply_hint": "WhatsApp opens in a new tab with your message ready.",
+  "from_abdullah": "Abdullah says",
+  "from_you": "You say"
+}

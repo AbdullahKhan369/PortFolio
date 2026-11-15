@@ -1,0 +1,21 @@
+{
+  "pill_label": "Chhupe hue sparks",
+  "count": "{total} mein se {found} mil gaye",
+  "hint": "Is page par teen sparks chhupe hain: 3, 6 aur 9. Teeno dhoondein aur free website audit paayein.",
+  "skip": "Talash chhor dein",
+  "hide": "Chhupayein",
+  "hide_label": "Sparks ki talash chhupayein",
+  "spark_label": "Spark {n}. Ek chhupa hua spark. Jama karne ke liye dabayein.",
+  "spark_done_label": "Spark {n}, pehle hi jama ho chuka",
+  "found_status": "Spark {n} mil gaya. {total} mein se {found}.",
+  "all_found": "Teeno sparks mil gaye. Aapka free website audit khul gaya.",
+  "sheet_title": "Free website audit",
+  "offer_default": "Mujhe apni website ka link bhejein, main use dekh kar WhatsApp par jawab dunga.",
+  "offer_field_label": "Aapki website ka link ya business ka naam (zaroori nahi)",
+  "offer_field_help": "Audit isi se shuru karunga.",
+  "offer_cta": "WhatsApp par message karein",
+  "offer_close": "Band karein",
+  "offer_message_found": "Assalam o Alaikum Abdullah, mujhe 3, 6 aur 9 ke sparks mil gaye hain aur main free website audit lena chahta hoon.",
+  "offer_message_skipped": "Assalam o Alaikum Abdullah, main free website audit lena chahta hoon.",
+  "offer_site_line": "Meri website ya business: {site}"
+}

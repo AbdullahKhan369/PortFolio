@@ -1,0 +1,14 @@
+{
+  "title": "Courses, results and work so far",
+  "lede": "A short list, and all of it real. Each light on the line is one milestone.",
+  "kindCourse": "Course",
+  "kindCertificate": "Certificate",
+  "kindResult": "Result",
+  "kindWork": "Work experience",
+  "kindOther": "Milestone",
+  "viewProof": "View proof",
+  "scanPlaceholder": "Certificate scan will be added here",
+  "openScan": "Open certificate scan",
+  "scanAlt": "Certificate scan: {title}",
+  "empty": "Milestones will appear here soon."
+}

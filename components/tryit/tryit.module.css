@@ -1,0 +1,76 @@
+/* "Try your business": controls on one side, a sample homepage (in the niche's own palette) on the other. */
+
+/* Mobile order: niche pills, then the sample homepage (so a tap on a niche is seen at once), then the rest. */
+.layout { display: grid; gap: 28px; grid-template-areas: "niche" "preview" "rest"; }
+@media (min-width: 1024px) {
+  .layout { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: 64px; row-gap: 28px; align-items: start; grid-template-areas: "niche preview" "rest preview"; grid-template-rows: auto 1fr; }
+}
+.nicheBox { grid-area: niche; min-width: 0; }
+.restBox { grid-area: rest; display: grid; gap: 28px; min-width: 0; }
+.fieldset { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 12px; }
+.legend { padding: 0; margin-bottom: 12px; font-size: 1rem; color: var(--c-text); font-family: var(--font-anybody), system-ui, sans-serif; }
+
+.pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.choice { position: relative; display: inline-flex; }
+.choice input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.choiceText {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: var(--r-pill);
+  border: 1.5px solid var(--c-muted); color: var(--c-text); font-size: 1rem; line-height: 1.2; pointer-events: none;
+}
+.choice input:checked + .choiceText { background: var(--c-text); border-color: var(--c-text); color: var(--c-base); font-weight: 600; }
+.choice input:focus-visible + .choiceText { outline: 3px solid var(--c-azure); outline-offset: 3px; }
+
+.field { display: grid; gap: 6px; }
+.field label { font-size: 1rem; }
+.hint { margin: 0; color: var(--c-muted); font-size: 0.9375rem; }
+.input {
+  width: 100%; min-height: 48px; padding: 0 14px; font-size: 1rem; color: var(--c-text);
+  background: var(--c-surface); border: 1.5px solid var(--c-muted); border-radius: 10px;
+}
+.input::placeholder { color: var(--c-muted); }
+.input:focus-visible { outline: 3px solid var(--c-azure); outline-offset: 2px; }
+.trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.send {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 52px; padding: 0 24px;
+  border: 0; border-radius: var(--r-pill); background: var(--c-wa); color: #06210f; font-size: 1.0625rem; font-weight: 700;
+  text-decoration: none; cursor: pointer;
+}
+.send:focus-visible { outline: 3px solid var(--c-text); outline-offset: 3px; }
+@media (min-width: 640px) { .send { width: auto; justify-self: start; } }
+.status { min-height: 1.5em; margin: 0; font-size: 0.9375rem; line-height: 1.5; color: var(--c-text); }
+
+/* ---------- the sample homepage ---------- */
+.preview { grid-area: preview; min-width: 0; display: grid; gap: 12px; align-content: start; }
+.browser { border-radius: 14px; overflow: hidden; background: #0a0d28; box-shadow: inset 0 0 0 1.5px rgba(242, 244, 255, 0.18); padding-top: 0; }
+.chrome { display: flex; align-items: center; gap: 6px; padding: 10px 14px; }
+.chromeDot { width: 9px; height: 9px; border-radius: 50%; background: rgba(242, 244, 255, 0.28); }
+.chromeBar { flex: 1; height: 18px; margin-left: 10px; border-radius: 9px; background: rgba(242, 244, 255, 0.1); }
+
+.mini { background: var(--mh-bg); color: var(--mh-fg); display: grid; gap: 0; }
+.miniNav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; }
+.miniBrand { font-size: 1.0625rem; font-weight: 700; overflow-wrap: anywhere; font-family: var(--font-anybody), system-ui, sans-serif; }
+.miniLinks { display: none; gap: 14px; font-size: 0.8125rem; opacity: 0.8; }
+@media (min-width: 480px) { .miniLinks { display: flex; } }
+.miniHero { padding: 28px 18px 30px; display: grid; gap: 16px; justify-items: start; }
+.miniHeadline { margin: 0; font-size: clamp(1.5rem, 5vw, 2.25rem); line-height: 1.08; max-width: 18ch; font-family: var(--font-anybody), system-ui, sans-serif; overflow-wrap: anywhere; }
+.miniBtn {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 0 18px; border-radius: var(--r-pill);
+  background: var(--mh-accent); color: var(--mh-on-accent); font-size: 0.9375rem; font-weight: 600;
+}
+.miniBlock { padding: 20px 18px; display: grid; gap: 12px; }
+.miniBlockTitle { margin: 0; font-size: 1.0625rem; font-weight: 700; font-family: var(--font-anybody), system-ui, sans-serif; }
+.miniItems { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+.miniItem { display: grid; gap: 4px; padding: 12px; background: color-mix(in srgb, var(--mh-fg) 7%, var(--mh-bg)); border-radius: 8px; font-size: 0.9375rem; }
+.miniPrice { color: var(--mh-accent); font-weight: 700; }
+.miniGallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.miniTile { aspect-ratio: 1; border-radius: 6px; background: var(--mh-bg); background: color-mix(in srgb, var(--mh-accent) 32%, var(--mh-bg)); }
+.miniTile:nth-child(2) { background: color-mix(in srgb, var(--mh-fg) 14%, var(--mh-bg)); }
+.wire { display: grid; gap: 8px; }
+.wire span { display: block; height: 8px; border-radius: 4px; background: color-mix(in srgb, var(--mh-fg) 22%, var(--mh-bg)); }
+.wire span:nth-child(2) { width: 86%; }
+.wire span:nth-child(3) { width: 58%; }
+.pin { display: flex; align-items: center; gap: 10px; }
+.pinIcon { width: 18px; height: 18px; flex: none; color: var(--mh-accent); }
+.miniFoot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 18px; background: color-mix(in srgb, var(--mh-fg) 8%, var(--mh-bg)); }
+.sampleNote { margin: 0; color: var(--c-muted); font-size: 0.9375rem; line-height: 1.5; max-width: 60ch; }

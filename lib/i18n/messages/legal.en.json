@@ -1,0 +1,20 @@
+{
+  "title": "Privacy",
+  "updated": "Last updated: 12 November 2026",
+  "intro": "This page explains what this website stores about you and why. It is short because there is not much.",
+  "back_home": "Back to the home page",
+  "s1_title": "Who runs this site",
+  "s1_body": "This website belongs to Abdullah Khan, a freelance web developer and digital marketer in Karachi, Pakistan, who also runs the studio The Prism Arc. I decide what is collected here and why.",
+  "s2_title": "What I collect",
+  "s2_body": "If you use the contact form, the Try your business tool or the free audit offer, I store what you type: your name if you gave one, your phone, WhatsApp number or email, your message, the business type you picked, the language of the page and the time you sent it. I use it only to reply to you and to keep track of my leads.\n\nThe site also counts a few anonymous actions, such as a click on a WhatsApp button, a language switch or a spark found. Each count stores the event name, the page path and the time. It is not linked to you.",
+  "s3_title": "What I do not collect",
+  "s3_body": "I do not use advertising cookies, tracking pixels or third-party analytics on this site. I do not store your IP address in my database. Your IP address is used briefly in the server's memory to stop spam and is not kept.\n\nYour browser may remember your language choice and your progress in the spark hunt on your own device. These are small settings, not tracking.",
+  "s4_title": "Where it is stored",
+  "s4_body": "Messages are stored in a Supabase database. The site is hosted on Vercel. Both process data on my behalf so the site can run. Fonts are downloaded when the site is built and served from the site itself.",
+  "s5_title": "WhatsApp and other sites",
+  "s5_body": "Buttons that open WhatsApp, LinkedIn, GitHub or a project's live site take you off this website. Those services have their own privacy policies and handle your data under them. Messages you send on WhatsApp are not stored by this site.",
+  "s6_title": "Your choices",
+  "s6_body": "You can ask me to show, correct or delete what I stored about you. Message me using the contact details on the home page and I will do it. I keep inquiries until I delete them or you ask me to.",
+  "s7_title": "Changes",
+  "s7_body": "If this page changes, the date at the top changes too."
+}

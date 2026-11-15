@@ -1,0 +1,9 @@
+{
+  "not_found_title": "This page does not exist",
+  "not_found_body": "The link may be old or mistyped. The home page has everything.",
+  "home": "Go to the home page",
+  "error_title": "This page failed to load",
+  "error_body": "Something broke on my side. Try again. If it keeps failing, message me on WhatsApp from the home page.",
+  "retry": "Try again",
+  "error_code": "Error code: {code}"
+}

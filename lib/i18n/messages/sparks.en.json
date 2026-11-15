@@ -1,0 +1,21 @@
+{
+  "pill_label": "Hidden sparks",
+  "count": "{found} of {total} found",
+  "hint": "Three sparks are hidden on this page: 3, 6 and 9. Find all three for a free website audit.",
+  "skip": "Skip the hunt",
+  "hide": "Hide",
+  "hide_label": "Hide the sparks hunt",
+  "spark_label": "Spark {n}. A hidden spark. Press to collect it.",
+  "spark_done_label": "Spark {n}, already collected",
+  "found_status": "Spark {n} found. {found} of {total}.",
+  "all_found": "All three sparks found. Your free website audit is unlocked.",
+  "sheet_title": "Free website audit",
+  "offer_default": "Send me your website link and I will review it and reply on WhatsApp.",
+  "offer_field_label": "Your website link or business name (optional)",
+  "offer_field_help": "I use this to start the audit.",
+  "offer_cta": "Message on WhatsApp",
+  "offer_close": "Close",
+  "offer_message_found": "Hi Abdullah, I found the 3, 6 and 9 sparks and would like the free website audit.",
+  "offer_message_skipped": "Hi Abdullah, I would like the free website audit.",
+  "offer_site_line": "My website or business: {site}"
+}

@@ -1,0 +1,8 @@
+/* Tailwind for the admin only: theme tokens + utilities, NO preflight.
+   The admin has its own reset in admin.css (scoped to .admin-root). S3's nested editors and S4's admin pages
+   (inbox, events, SEO, backup) are written with Tailwind utility classes, so they need these utilities here.
+   tokens.css supplies the colour tokens behind classes such as bg-surface / text-text / bg-base. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "../../../styles/tokens.css";

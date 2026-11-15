@@ -1,0 +1,9 @@
+{
+  "not_found_title": "Yeh page maujood nahi hai",
+  "not_found_body": "Link purana ya ghalat likha hua ho sakta hai. Home page par sab kuch mil jayega.",
+  "home": "Home page par jayein",
+  "error_title": "Yeh page load nahi hua",
+  "error_body": "Meri taraf se kuch kharab ho gaya. Dobara koshish karein. Phir bhi na chale to home page se mujhe WhatsApp par message kar dein.",
+  "retry": "Dobara koshish karein",
+  "error_code": "Error code: {code}"
+}

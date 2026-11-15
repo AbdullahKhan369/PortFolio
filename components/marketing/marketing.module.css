@@ -1,0 +1,68 @@
+/* Campaign receipts. Paper is Glass White on the Midnight page; the platform swatch is one of the few spectrum accents. */
+
+.slot {
+  position: relative; height: 14px; max-width: 460px; margin-bottom: 22px;
+  background: var(--c-surface); border-radius: var(--r-pill);
+  box-shadow: inset 0 0 0 1.5px rgba(144, 150, 196, 0.45);
+}
+.slotLight { position: absolute; right: 14px; top: 50%; width: 6px; height: 6px; margin-top: -3px; border-radius: 50%; background: var(--c-mint); }
+
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 56px 40px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 768px) {
+  .list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .item:nth-child(even) { margin-top: 72px; }
+}
+@media (min-width: 1200px) {
+  .list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .item:nth-child(even) { margin-top: 0; }
+  .item:nth-child(3n + 2) { margin-top: 72px; }
+}
+
+.item { position: relative; max-width: 420px; width: 100%; }
+.feed { will-change: auto; }
+.printHead {
+  position: absolute; left: -6px; right: -6px; height: 3px; margin-top: -1px; pointer-events: none;
+  background: var(--c-azure); box-shadow: 0 0 10px 2px rgba(58, 160, 255, 0.55); border-radius: 2px;
+}
+
+.paper {
+  --ink: #12163a; --ink-soft: #4f5585; --rule: #9096c4;
+  position: relative; width: 100%; color: var(--ink);
+}
+.body { background: var(--c-text); padding: 26px 22px 20px; display: grid; gap: 18px; }
+.teeth {
+  height: 12px;
+  background: var(--c-text);
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 16px 100%;
+  mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 16px 100%;
+}
+
+.head { display: flex; align-items: center; gap: 12px; }
+.swatch { width: 12px; height: 12px; flex: none; border-radius: 3px; background: var(--swatch, var(--c-muted)); }
+.title { margin: 0; font-size: 1.375rem; line-height: 1.15; font-variation-settings: "wdth" 80; overflow-wrap: anywhere; }
+
+.rows { margin: 0; display: grid; gap: 10px; }
+.row { display: grid; gap: 2px; }
+.row dt { font-size: 0.8125rem; color: var(--ink-soft); }
+.row dd { margin: 0; font-size: 1rem; line-height: 1.45; overflow-wrap: anywhere; }
+
+.leaders { margin: 0; display: grid; gap: 8px; }
+.leader { display: flex; align-items: baseline; gap: 8px; }
+.leader dt { display: flex; flex: 1 1 auto; align-items: baseline; gap: 8px; min-width: 0; font-size: 0.9375rem; }
+.leader dt::after { content: ""; flex: 1 1 auto; min-width: 12px; border-bottom: 2px dotted var(--rule); transform: translateY(-3px); }
+.leader dd {
+  margin: 0; flex: none; max-width: 62%; text-align: right; font-size: 1.125rem; line-height: 1.2;
+  font-variant-numeric: tabular-nums; font-variation-settings: "wdth" 80; overflow-wrap: anywhere;
+}
+
+.results { display: grid; gap: 8px; }
+.resultsTitle { margin: 0; font-size: 0.8125rem; color: var(--ink-soft); }
+.note { margin: 0; font-size: 0.9375rem; color: var(--ink-soft); }
+.notes { margin: 0; font-size: 0.9375rem; line-height: 1.6; }
+
+.projectLink {
+  display: inline-flex; align-items: center; min-height: 44px; width: fit-content;
+  color: var(--ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px;
+}
+.projectLink:focus-visible { outline: 3px solid #1a62c4; outline-offset: 3px; }
+.foot { margin: 0; padding-top: 10px; font-size: 0.8125rem; color: var(--ink-soft); border-top: 2px dashed var(--rule); }

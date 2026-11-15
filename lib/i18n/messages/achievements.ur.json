@@ -1,0 +1,14 @@
+{
+  "title": "Ab tak ke courses, nateeje aur kaam",
+  "lede": "List chhoti hai, magar sab kuch asli. Line par har roshni ek sang-e-meel hai.",
+  "kindCourse": "Course",
+  "kindCertificate": "Certificate",
+  "kindResult": "Nateeja",
+  "kindWork": "Kaam ka tajurba",
+  "kindOther": "Sang-e-meel",
+  "viewProof": "Saboot dekhein",
+  "scanPlaceholder": "Certificate ka scan yahan lagaya jayega",
+  "openScan": "Certificate ka scan kholein",
+  "scanAlt": "Certificate ka scan: {title}",
+  "empty": "Sang-e-meel jald yahan nazar aayenge."
+}

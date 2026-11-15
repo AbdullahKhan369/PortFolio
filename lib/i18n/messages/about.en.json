@@ -1,0 +1,21 @@
+{
+  "title": "About me",
+  "bio": "I am Abdullah Khan, a freelance web developer, digital marketer and graphic designer based in Karachi. I do the whole job myself: the website, the ads that send people to it, and the visuals that make both look like one business.\n\nI started IT courses at a young age and have kept studying since. Before freelancing I worked in sales, in quality assurance and in Node.js development.",
+  "basedTerm": "Based in",
+  "basedValue": "Karachi, Pakistan",
+  "rolesTerm": "What I do",
+  "rolesValue": "Web developer (front end and full stack), digital marketer, graphic designer and brand strategist.",
+  "workedTerm": "Worked in",
+  "workedValue": "Sales, quality assurance and Node.js development.",
+  "buildTerm": "I build with",
+  "buildValue": "HTML, CSS, JavaScript, React, Next.js, Tailwind, Node and Express, MongoDB, Supabase, Firebase, Git, REST APIs.",
+  "adsTerm": "I advertise with",
+  "adsValue": "Meta Ads, TikTok Promote, Instagram and Facebook marketing, lead generation and reporting.",
+  "createTerm": "I create with",
+  "createValue": "Graphic design, UI and UX, short video in CapCut and AI-assisted creative production.",
+  "studiedTerm": "Studied",
+  "studiedValue": "Modern Web Application Development at Saylani Mass IT Training (SMIT).",
+  "handleTerm": "Handle",
+  "handleValue": "AbdullahKhan_369. The 369 is a nod to Nikola Tesla.",
+  "photoAlt": "Portrait of {name}"
+}
