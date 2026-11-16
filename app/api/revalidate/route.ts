@@ -39,6 +39,8 @@ export async function POST(req: NextRequest) {
   if (list.length === 0) return json({ ok: false, error: "Nothing to revalidate" }, 400);
 
   for (const t of new Set(list)) revalidateTag(t);
-  if (all) revalidatePath("/", "layout");
-  return json({ ok: true, revalidated: list.length });
+if (all) {
+  revalidatePath("/[lang]", "layout");
+  revalidatePath("/", "layout");
+}  return json({ ok: true, revalidated: list.length });
 }
