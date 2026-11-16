@@ -221,7 +221,7 @@ function CrudInner({ config }: { config: CrudConfig }) {
           <button type="button" className="a-btn a-btn-primary" onClick={startNew}>Add {config.singular.toLowerCase()}</button>
         </div>
       ) : visibleRows.length === 0 ? (
-        <p className="a-text">Nothing matches "{query}". Clear the search to see everything.</p>
+        <p className="a-text">Nothing matches &quot;{query}&quot;. Clear the search to see everything..</p>
       ) : (
         <>
           {orderable && !searching ? (

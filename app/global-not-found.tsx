@@ -42,6 +42,7 @@ export default function GlobalNotFound() {
         </h1>
         <p style={{ color: "#9096C4", fontSize: 18, lineHeight: 1.7 }}>{en.not_found_body}</p>
         <p style={{ margin: "32px 0 0" }}>
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
           <a href="/en" style={link}>
             {en.home}
           </a>
@@ -54,6 +55,7 @@ export default function GlobalNotFound() {
           {ur.not_found_body}
         </p>
         <p style={{ margin: "24px 0 0" }}>
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
           <a href="/ur" lang="ur-Latn" style={link}>
             {ur.home}
           </a>
