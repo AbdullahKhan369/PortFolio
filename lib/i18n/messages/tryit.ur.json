@@ -34,5 +34,10 @@
   "msg_name": " ({name})",
   "msg_sections": "Maine yeh hissay chune hain: {sections}.",
   "msg_close": "Mehrbani karke bataiye ke shuru karne ke liye aap ko mujh se kya chahiye.",
-  "empty": "Niche templates jald shamil honge."
+  "empty": "Niche templates jald shamil honge.",
+  "device_legend": "Preview kis par",
+  "device_desktop": "Laptop",
+  "device_phone": "Phone",
+  "accent_legend": "Brand ka rang",
+  "accent_default": "Niche ke apne rang"
 }

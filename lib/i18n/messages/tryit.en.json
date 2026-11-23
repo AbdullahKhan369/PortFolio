@@ -34,5 +34,10 @@
   "msg_name": " called {name}",
   "msg_sections": "Sections I picked: {sections}.",
   "msg_close": "Please tell me what you need from me to get started.",
-  "empty": "Niche templates will be added soon."
+  "empty": "Niche templates will be added soon.",
+  "device_legend": "Preview on",
+  "device_desktop": "Laptop",
+  "device_phone": "Phone",
+  "accent_legend": "Brand colour",
+  "accent_default": "Use the niche colours"
 }

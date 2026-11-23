@@ -5,6 +5,8 @@ import { getSiteSettings } from "@/lib/content";
 import { parseSectionLayout, type HomeSectionId } from "@/lib/content/appearance";
 import Marquee from "@/components/layout/Marquee";
 import Hero from "@/components/sections/Hero";
+import HeroStory from "@/components/hero/HeroStory";
+import ProofStrip from "@/components/hero/ProofStrip";
 import Achievements from "@/components/sections/Achievements";
 import Projects from "@/components/sections/Projects";
 import MarketingProjects from "@/components/sections/MarketingProjects";
@@ -50,6 +52,8 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
     <>
       <HomeJsonLd lang={lang} />
       <Hero lang={lang} />
+      <HeroStory lang={lang} />
+      <ProofStrip lang={lang} />
       <Marquee lang={lang} />
       {layout.filter((slot) => slot.visible).map((slot) => renderSection(slot.id, lang))}
     </>

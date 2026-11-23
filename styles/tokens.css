@@ -8,6 +8,8 @@
 @theme inline{
   --color-base:var(--c-base); --color-surface:var(--c-surface); --color-text:var(--c-text); --color-muted:var(--c-muted);
   --color-wa:var(--c-wa); --color-violet:var(--c-violet); --color-azure:var(--c-azure); --color-mint:var(--c-mint); --color-amber:var(--c-amber);
-  --font-display:var(--font-anybody), system-ui, sans-serif;
+  --font-display:var(--font-bricolage), system-ui, sans-serif;
+  --font-accent-t:var(--font-accent), Georgia, serif;
+  --font-mono-t:var(--font-mono), ui-monospace, monospace;
   --font-body:var(--font-source-serif), Georgia, serif;
 }

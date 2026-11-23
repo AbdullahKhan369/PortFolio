@@ -9,5 +9,22 @@
   "roleCreativeTitle": "Creative",
   "roleCreativeLine": "Graphics, short video and brand visuals, so the ads and the site look like one business.",
   "portraitAlt": "Portrait of {name}",
-  "rolesAria": "What I do"
+  "rolesAria": "What I do",
+  "storyAria": "How a business becomes a website, ads and visuals",
+  "storyEyebrow": "How it works",
+  "storyTitle": "Your business goes in. Three jobs come out.",
+  "storyIn": "Your business",
+  "storyInLine": "What you sell, who buys it and where your customers are today.",
+  "storyHint": "Keep scrolling",
+  "storyOrder": "Order on WhatsApp",
+  "storyAdCta": "Send message",
+  "storyChatIn": "Hi, is this available?",
+  "storyChatOut": "Yes, sending you the details.",
+  "storyNote": "Illustrations of the work, not client results.",
+  "proofAria": "The work at a glance",
+  "proofLive": "Live sites you can open",
+  "proofProjects": "Projects built",
+  "proofCampaigns": "Campaigns on record",
+  "proofSystems": "Systems documented",
+  "proofNote": "Counted from the work listed on this page."
 }

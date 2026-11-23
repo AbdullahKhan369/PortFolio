@@ -15,6 +15,12 @@ export default async function About({ lang }: { lang: Lang }) {
   const newTab = tr(m.common, "newTab");
 
   const bio = (profile ? pick(profile, "bio", lang) : "") || tr(a, "bio");
+  // The bio may end with a **bold** tagline (Markdown stars). Show the tagline as a signature line, never as literal stars.
+  const all = paragraphs(bio);
+  const last = all[all.length - 1] ?? "";
+  const hasTag = all.length > 1 && /^\*\*[^*]+\*\*$/.test(last);
+  const body = (hasTag ? all.slice(0, -1) : all).map((p) => p.replace(/\*\*(.+?)\*\*/g, "$1"));
+  const bioParts = { lead: body.slice(0, 2), more: body.slice(2), tagline: hasTag ? last.replace(/\*\*/g, "") : "" };
   const github = settings.github_url?.trim() || "https://github.com/AbdullahKhan369";
   const linkedin = settings.linkedin_url?.trim();
   const email = settings.email?.trim();
@@ -43,11 +49,25 @@ export default async function About({ lang }: { lang: Lang }) {
           <h2 id="pa-about-h" className="pa-h2">
             <Morph id="about.title" text={tr(a, "title")} />
           </h2>
-          {paragraphs(bio).map((p, i) => (
+          {bioParts.lead.map((p, i) => (
             <p key={i} className="pa-body">
               <Morph id={`about.bio.${i}`} text={p} />
             </p>
           ))}
+          {bioParts.more.length > 0 ? (
+            <details className="pa-more">
+              <summary>
+                <span className="pa-more-open">{tr(a, "readMore")}</span>
+                <span className="pa-more-close">{tr(a, "readLess")}</span>
+              </summary>
+              {bioParts.more.map((p, i) => (
+                <p key={i} className="pa-body">
+                  <Morph id={`about.bio.${i + bioParts.lead.length}`} text={p} />
+                </p>
+              ))}
+            </details>
+          ) : null}
+          {bioParts.tagline ? <p className="pa-about-tag">{bioParts.tagline}</p> : null}
           <ul className="pa-about-links">
             <li>
               <ExternalLink href={github} newTabLabel={newTab} className="pa-textlink">

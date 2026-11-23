@@ -59,6 +59,9 @@ export async function Footer({ lang }: { lang: Lang }) {
           </ul>
         </nav>
       </div>
+      <p className="pa-footer-mark" aria-hidden="true">
+        {tr(c, "brand")}
+      </p>
       <div className="pa-wrap pa-footer-base">
         <p>{tr(c, "footerCopyright", { year })}</p>
         <p>{tr(c, "footerHandle")}</p>

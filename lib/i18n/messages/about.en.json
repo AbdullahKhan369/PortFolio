@@ -17,5 +17,7 @@
   "studiedValue": "Modern Web Application Development at Saylani Mass IT Training (SMIT).",
   "handleTerm": "Handle",
   "handleValue": "AbdullahKhan_369. The 369 is a nod to Nikola Tesla.",
-  "photoAlt": "Portrait of {name}"
+  "photoAlt": "Portrait of {name}",
+  "readMore": "Read the full story",
+  "readLess": "Show less"
 }

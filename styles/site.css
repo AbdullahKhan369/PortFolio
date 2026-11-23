@@ -12,7 +12,9 @@
   --header-h: 56px;
   --pa-pad: clamp(1.25rem, 5vw, 3rem);
   --pa-max: 76rem;
-  --pa-display: var(--font-anybody), system-ui, sans-serif;
+  --pa-display: var(--font-bricolage), system-ui, sans-serif;
+  --pa-accent: var(--font-accent), Georgia, "Times New Roman", serif;
+  --pa-mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   --pa-body: var(--font-source-serif), Georgia, "Times New Roman", serif;
   --r-control: 8px;
   --dvh: 1dvh;

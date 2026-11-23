@@ -8,7 +8,7 @@
 .nicheBox { grid-area: niche; min-width: 0; }
 .restBox { grid-area: rest; display: grid; gap: 28px; min-width: 0; }
 .fieldset { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 12px; }
-.legend { padding: 0; margin-bottom: 12px; font-size: 1rem; color: var(--c-text); font-family: var(--font-anybody), system-ui, sans-serif; }
+.legend { padding: 0; margin-bottom: 12px; font-size: 1rem; color: var(--c-text); font-family: var(--font-bricolage), system-ui, sans-serif; }
 
 .pills { display: flex; flex-wrap: wrap; gap: 8px; }
 .choice { position: relative; display: inline-flex; }
@@ -49,17 +49,17 @@
 
 .mini { background: var(--mh-bg); color: var(--mh-fg); display: grid; gap: 0; }
 .miniNav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; }
-.miniBrand { font-size: 1.0625rem; font-weight: 700; overflow-wrap: anywhere; font-family: var(--font-anybody), system-ui, sans-serif; }
+.miniBrand { font-size: 1.0625rem; font-weight: 700; overflow-wrap: anywhere; font-family: var(--font-bricolage), system-ui, sans-serif; }
 .miniLinks { display: none; gap: 14px; font-size: 0.8125rem; opacity: 0.8; }
 @media (min-width: 480px) { .miniLinks { display: flex; } }
 .miniHero { padding: 28px 18px 30px; display: grid; gap: 16px; justify-items: start; }
-.miniHeadline { margin: 0; font-size: clamp(1.5rem, 5vw, 2.25rem); line-height: 1.08; max-width: 18ch; font-family: var(--font-anybody), system-ui, sans-serif; overflow-wrap: anywhere; }
+.miniHeadline { margin: 0; font-size: clamp(1.5rem, 5vw, 2.25rem); line-height: 1.08; max-width: 18ch; font-family: var(--font-bricolage), system-ui, sans-serif; overflow-wrap: anywhere; }
 .miniBtn {
   display: inline-flex; align-items: center; min-height: 40px; padding: 0 18px; border-radius: var(--r-pill);
   background: var(--mh-accent); color: var(--mh-on-accent); font-size: 0.9375rem; font-weight: 600;
 }
 .miniBlock { padding: 20px 18px; display: grid; gap: 12px; }
-.miniBlockTitle { margin: 0; font-size: 1.0625rem; font-weight: 700; font-family: var(--font-anybody), system-ui, sans-serif; }
+.miniBlockTitle { margin: 0; font-size: 1.0625rem; font-weight: 700; font-family: var(--font-bricolage), system-ui, sans-serif; }
 .miniItems { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
 .miniItem { display: grid; gap: 4px; padding: 12px; background: color-mix(in srgb, var(--mh-fg) 7%, var(--mh-bg)); border-radius: 8px; font-size: 0.9375rem; }
 .miniPrice { color: var(--mh-accent); font-weight: 700; }
@@ -74,3 +74,21 @@
 .pinIcon { width: 18px; height: 18px; flex: none; color: var(--mh-accent); }
 .miniFoot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 18px; background: color-mix(in srgb, var(--mh-fg) 8%, var(--mh-bg)); }
 .sampleNote { margin: 0; color: var(--c-muted); font-size: 0.9375rem; line-height: 1.5; max-width: 60ch; }
+
+/* ---------- preview controls: laptop / phone and brand colour ---------- */
+.ctrlRow { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.seg { display: inline-flex; padding: 3px; border-radius: var(--r-pill); border: 1.5px solid var(--c-muted); }
+.segBtn { min-height: 40px; padding: 0 16px; border: 0; border-radius: var(--r-pill); background: transparent; color: var(--c-text); font-size: 0.9375rem; cursor: pointer; }
+.segBtn[aria-pressed="true"] { background: var(--c-text); color: var(--c-base); font-weight: 600; }
+.segBtn:focus-visible, .swatch:focus-visible { outline: 3px solid var(--c-azure); outline-offset: 2px; }
+.swatches { display: flex; align-items: center; gap: 4px; }
+.swatch { width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: transparent; cursor: pointer; position: relative; }
+.swatch::before { content: ""; position: absolute; inset: 9px; border-radius: 50%; background: inherit; border: 2px solid rgba(242, 244, 255, 0.3); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.swatch[aria-pressed="true"]::before { border-color: var(--c-text); box-shadow: 0 0 0 3px rgba(242, 244, 255, 0.22); transform: scale(1.08); }
+.swatchAuto::before { background: conic-gradient(var(--c-violet), var(--c-azure), var(--c-mint), var(--c-amber), var(--c-violet)); }
+.deviceWrap { transition: padding 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.deviceWrap[data-device="phone"] .browser { max-width: 320px; margin-inline: auto; border-radius: 34px; box-shadow: inset 0 0 0 1.5px rgba(242, 244, 255, 0.22), 0 30px 60px -30px rgba(0, 0, 0, 0.7); }
+.deviceWrap[data-device="phone"] .chrome { justify-content: center; padding-block: 8px 2px; }
+.deviceWrap[data-device="phone"] .chromeDot { display: none; }
+.deviceWrap[data-device="phone"] .chromeBar { flex: none; width: 84px; height: 16px; margin: 0; }
+.deviceWrap[data-device="phone"] .miniLinks { display: none; }

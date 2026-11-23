@@ -32,11 +32,12 @@ function Layer({
   const { scrollYProgress } = useScroll({ target: nextRef ?? selfRef, offset: ["start end", "start 25%"] });
   const p = nextRef ? scrollYProgress : zero;
   const scale = useTransform(p, [0, 1], [1, 0.95]);
-  const opacity = useTransform(p, [0, 1], [1, 0.5]);
+  // Dim with brightness, not opacity: a see-through band would show the bands stacked behind it.
+  const filter = useTransform(p, [0, 1], ["brightness(1)", "brightness(0.55)"]);
 
   return (
     <li ref={selfRef} className={styles.item} style={cssVars({ "--i": index })}>
-      <motion.div className={styles.itemInner} style={stacked ? { scale, opacity } : undefined}>
+      <motion.div className={styles.itemInner} style={stacked ? { scale, filter } : undefined}>
         {children}
       </motion.div>
     </li>

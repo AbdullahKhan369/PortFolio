@@ -10,6 +10,8 @@ import MiniHome, { type MiniNiche } from "./MiniHome";
 import styles from "./tryit.module.css";
 import { cx, fill } from "@/components/work/utils";
 
+const ACCENTS = ["#8A5CFF", "#3AA0FF", "#4FE3B0", "#FFC857"] as const;
+
 type Status = "idle" | "saving" | "saved" | "failed" | "need_contact";
 
 export default function Configurator({
@@ -32,13 +34,17 @@ export default function Configurator({
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [blocks, setBlocks] = useState<BlockKey[]>(["catalogue", "gallery"]);
+  const [accent, setAccent] = useState<string | null>(null);
+  const [device, setDevice] = useState<"desktop" | "phone">("desktop");
   const [honeypot, setHoneypot] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [viaWhatsApp, setViaWhatsApp] = useState(false);
   const savedFor = useRef("");
   const contactRef = useRef<HTMLInputElement>(null);
 
-  const niche = niches.find((n) => n.key === nicheKey) ?? niches[0];
+  const baseNiche = niches.find((n) => n.key === nicheKey) ?? niches[0];
+  // The visitor can try their own brand colour; the brief and the saved inquiry are not affected.
+  const niche = baseNiche && accent ? { ...baseNiche, palette: { ...baseNiche.palette, accent } } : baseNiche;
   const hasNumber = !!whatsappNumber && whatsappNumber.replace(/\D/g, "").length >= 6;
 
   const message = useMemo(
@@ -118,7 +124,24 @@ export default function Configurator({
       </div>
 
       <div className={styles.preview}>
+        <div className={styles.ctrlRow}>
+          <div className={styles.seg} role="group" aria-label={m.device_legend || "Preview on"}>
+            {(["desktop", "phone"] as const).map((d) => (
+              <button key={d} type="button" className={styles.segBtn} aria-pressed={device === d} onClick={() => setDevice(d)}>
+                {d === "desktop" ? m.device_desktop || "Laptop" : m.device_phone || "Phone"}
+              </button>
+            ))}
+          </div>
+          <div className={styles.swatches} role="group" aria-label={m.accent_legend || "Brand colour"}>
+            <button type="button" className={cx(styles.swatch, styles.swatchAuto)} aria-pressed={accent === null} aria-label={m.accent_default || "Use the niche colours"} onClick={() => setAccent(null)} />
+            {ACCENTS.map((c, i) => (
+              <button key={c} type="button" className={styles.swatch} style={{ background: c }} aria-pressed={accent === c} aria-label={`${m.accent_legend || "Brand colour"} ${i + 1}`} onClick={() => setAccent(c)} />
+            ))}
+          </div>
+        </div>
+        <div className={styles.deviceWrap} data-device={device}>
         <MiniHome niche={niche} name={name} blocks={blocks} m={m} animate={animate} label={fill(m.preview_label, { niche: niche.label })} />
+        </div>
         <p className={cx(styles.sampleNote, "font-body")}>{m.sample_note}</p>
       </div>
 

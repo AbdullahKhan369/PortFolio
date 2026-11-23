@@ -26,12 +26,12 @@
 .node[aria-pressed="true"] .shape { fill: var(--c-base); stroke-width: 3.5; }
 .node[aria-pressed="true"] .fillTint { fill: var(--k); fill-opacity: 0.22; }
 .mark { fill: none; stroke: var(--k); stroke-width: 1.6; stroke-linecap: round; }
-.aiText { fill: var(--k); font-size: 10px; font-weight: 700; font-family: var(--font-anybody), system-ui, sans-serif; }
+.aiText { fill: var(--k); font-size: 10px; font-weight: 700; font-family: var(--font-bricolage), system-ui, sans-serif; }
 .ring { fill: none; stroke: var(--c-azure); stroke-width: 2.5; stroke-dasharray: 4 3; opacity: 0; }
 .node:focus-visible .ring { opacity: 1; }
 .hit { fill: transparent; }
 
-.label { font-family: var(--font-anybody), system-ui, sans-serif; font-size: 13px; font-weight: 500; fill: var(--c-text); pointer-events: none; }
+.label { font-family: var(--font-bricolage), system-ui, sans-serif; font-size: 13px; font-weight: 500; fill: var(--c-text); pointer-events: none; }
 .node[aria-pressed="true"] .label { font-weight: 700; }
 
 .edge { stroke: var(--c-muted); stroke-opacity: 0.65; stroke-width: 1.6; fill: none; }

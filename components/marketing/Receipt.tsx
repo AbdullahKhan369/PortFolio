@@ -70,7 +70,6 @@ export default function Receipt({ c, lang, m, project }: { c: MarketingCampaign;
           </div>
         )}
 
-        {noFigures && <p className={styles.note}>{m.no_figures}</p>}
         {hasValue(notes) && <p className={cx(styles.notes, "font-body")}>{notes}</p>}
 
         {project && (
@@ -80,7 +79,7 @@ export default function Receipt({ c, lang, m, project }: { c: MarketingCampaign;
           </Link>
         )}
 
-        <p className={styles.foot}>{m.recorded_note}</p>
+        {!noFigures && <p className={styles.foot}>{m.recorded_note}</p>}
       </div>
       <div className={styles.teeth} aria-hidden="true" />
     </article>

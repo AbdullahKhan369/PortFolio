@@ -1,3 +1,4 @@
+import { getCopyOverrides } from "@/lib/content/copy";
 import { Fragment, type CSSProperties } from "react";
 import type { Lang } from "@/lib/content/types";
 import { getProfile, getSiteSettings } from "@/lib/content";
@@ -24,15 +25,18 @@ function splitLines(text: string): string[][] {
  * The WebGL prism (PrismStage) replaces the SVG prism (PrismScene) when the device can run it.
  */
 export default async function Hero({ lang }: { lang: Lang }) {
-  const [settings, profile, m] = await Promise.all([getSiteSettings(), getProfile(), getMessages(lang, ["hero", "common"])]);
+  const [settings, profile, m, copy] = await Promise.all([getSiteSettings(), getProfile(), getMessages(lang, ["hero", "common"]), getCopyOverrides()]);
   const h = m.hero;
   const c = m.common;
 
   const name = profile?.name?.trim() || tr(c, "brand");
-  const headline = pick(settings, "hero_headline", lang) || tr(h, "headline");
-  const sub = pick(settings, "hero_sub", lang) || tr(h, "sub");
+  // Priority: what you saved in Admin > Site text, then Admin > Settings, then the built-in text.
+  // (Before, Settings always won, so a Site text edit of hero.headline or hero.sub never showed.)
+  const edited = (key: string): string => (copy[key]?.[lang] ?? "").trim();
+  const headline = edited("hero.headline") || pick(settings, "hero_headline", lang) || tr(h, "headline");
+  const sub = edited("hero.sub") || pick(settings, "hero_sub", lang) || tr(h, "sub");
   const availability = pick(settings, "availability", lang);
-  const waMessage = pick(settings, "whatsapp_default_message", lang) || tr(c, "waMessage");
+  const waMessage = edited("common.waMessage") || pick(settings, "whatsapp_default_message", lang) || tr(c, "waMessage");
 
   const roles = [
     { key: "dev", title: tr(h, "roleDevTitle"), line: tr(h, "roleDevLine") },

@@ -1,6 +1,6 @@
 import "../globals.css";
 import type { Metadata } from "next";
-import { Anybody, Source_Serif_4 } from "next/font/google";
+import { Bricolage_Grotesque, Instrument_Serif, JetBrains_Mono, Source_Serif_4 } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import type { Lang } from "@/lib/content/types";
@@ -17,11 +17,30 @@ import { LangWipe } from "@/components/layout/LangWipe";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { LangProvider } from "@/components/layout/LangProvider";
+import { PremiumFX } from "@/components/layout/PremiumFX";
 
-const anybody = Anybody({
+// Display: Bricolage Grotesque (optical-size + width axes, so big headings get the sharp cut automatically).
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  axes: ["wdth"],
-  variable: "--font-anybody",
+  axes: ["opsz", "wdth"],
+  variable: "--font-bricolage",
+  display: "swap",
+});
+
+// Accent: an italic serif used for one or two words in a heading and for quiet captions.
+const instrument = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-accent",
+  display: "swap",
+});
+
+// Small labels, section numbers and metadata.
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -60,7 +79,7 @@ export default async function LangLayout({ children, params }: { children: React
   const theme = themeCss(settings);
 
   return (
-    <html lang={lang === "ur" ? "ur-Latn" : "en"} className={`${anybody.variable} ${sourceSerif.variable}`} suppressHydrationWarning {...fxAttributes(settings)}>
+    <html lang={lang === "ur" ? "ur-Latn" : "en"} className={`${bricolage.variable} ${instrument.variable} ${mono.variable} ${sourceSerif.variable}`} suppressHydrationWarning {...fxAttributes(settings)}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: BOOT }} />
         {theme ? <style dangerouslySetInnerHTML={{ __html: theme }} /> : null}
@@ -74,6 +93,7 @@ export default async function LangLayout({ children, params }: { children: React
         <ScrollReveal />
         <Chapters />
         <CursorLight />
+        <PremiumFX />
         <LangWipe lang={lang} />
         <div id="pa-app">
           <LangProvider lang={lang}>
